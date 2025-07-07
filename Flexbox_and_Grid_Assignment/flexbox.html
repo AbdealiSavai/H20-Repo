@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Driver's License</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .license-card {
+      width: 600px;
+      height: 300px;
+      background-color: #ffffff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 50px auto;
+      grid-template-areas:
+        "header header"
+        "photo info";
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .license-header {
+      grid-area: header;
+      text-align: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .photo-section {
+      grid-area: photo;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .photo-section img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 2px solid #333;
+      border-radius: 4px;
+    }
+
+    .info-section {
+      grid-area: info;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 4px 12px;
+      padding: 10px;
+      font-size: 1em;
+    }
+
+    .info-section div {
+      padding: 2px 0;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="license-card">
+    <div class="license-header">Driver's License - ID #123456789</div>
+
+    <div class="photo-section">
+      <img src="https://media.4-paws.org/d/2/5/f/d25ff020556e4b5eae747c55576f3b50886c0b90/cut%20cat%20serhio%2002-1813x1811-720x719.jpg" alt="Pet Photo" />
+      <div><strong>State:</strong> Catifornia</div>
+    </div>
+
+    <div class="info-section">
+      <div class="label">Name:</div>
+      <div>Whiskers</div>
+      <div class="label">DOB:</div>
+      <div>Jan 1, 2020</div>
+      <div class="label">Height:</div>
+      <div>1ft 3in</div>
+      <div class="label">Eye Color:</div>
+      <div>Green</div>
+      <div class="label">Date Issued:</div>
+      <div>June 1, 2025</div>
+      <div class="label">Date Expires:</div>
+      <div>June 1, 2030</div>
+    </div>
+  </div>
+</body>
+</html>
